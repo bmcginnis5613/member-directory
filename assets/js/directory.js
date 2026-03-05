@@ -14,9 +14,12 @@
             const searchInput = directory.querySelector( '.bmd-search' );
             if ( ! searchInput ) return;
 
+            searchInput.value = '';
+
             const grid    = directory.querySelector( '.bmd-grid' );
             const cards   = directory.querySelectorAll( '.bmd-card' );
             const counter = directory.querySelector( '.bmd-count' );
+            const clearBtn = directory.querySelector( '.bmd-search-clear' );
 
             // Inject a "no results" row
             const noResults = document.createElement( 'p' );
@@ -45,9 +48,20 @@
                     }
                 }
 
+                // Show/hide clear button
+                if ( clearBtn ) clearBtn.hidden = ! query;
+
                 // Show/hide no-results message
                 noResults.classList.toggle( 'bmd-no-results--visible', visible === 0 && query !== '' );
             } );
+
+            if ( clearBtn ) {
+                clearBtn.addEventListener( 'click', function () {
+                    searchInput.value = '';
+                    searchInput.dispatchEvent( new Event( 'input' ) );
+                    searchInput.focus();
+                } );
+            }
         } );
     } );
 } )();
