@@ -159,7 +159,7 @@ class BMD_Admin {
             <ul style="list-style:disc;padding-left:20px">
                 <li><strong>bmd_title</strong> — <?php esc_html_e( 'Job Title / Role', 'boardroom-member-directory' ); ?></li>
                 <li><strong>bmd_company</strong> — <?php esc_html_e( 'Company / Organization', 'boardroom-member-directory' ); ?></li>
-                <li><strong>bmd_industry</strong> — <?php esc_html_e( 'Industry / Sector', 'boardroom-member-directory' ); ?></li>
+                <li><strong>bmd_location</strong> — <?php esc_html_e( 'Location', 'boardroom-member-directory' ); ?></li>
                 <li><strong>bmd_linkedin</strong> — <?php esc_html_e( 'LinkedIn Profile URL', 'boardroom-member-directory' ); ?></li>
             </ul>
             <p><?php esc_html_e( 'Members can also update their own profile fields from the WP front-end if you use a profile editing plugin, or directly from their WP dashboard profile page.', 'boardroom-member-directory' ); ?></p>

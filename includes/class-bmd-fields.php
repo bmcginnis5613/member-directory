@@ -3,13 +3,10 @@
  * BMD_Fields — registers and saves custom user meta fields.
  *
  * Fields added:
- *   bmd_title       — Job Title / Role
- *   bmd_company     — Company / Organization
- *   bmd_industry    — Industry / Sector
- *   bmd_linkedin    — LinkedIn Profile URL
- *
- * These are stored as standard WordPress user meta, so they are
- * compatible with any future integration (REST API, WP-CLI, etc.).
+ * bmd_title       — Job Title / Role
+ * bmd_company     — Company / Organization
+ * bmd_location    — Location (City, State)
+ * bmd_linkedin    — LinkedIn Profile URL
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -32,19 +29,19 @@ class BMD_Fields {
     public static function get_field_definitions() {
         return [
             'bmd_title'    => [
-                'label'       => __( 'Job Title / Role', 'boardroom-member-directory' ),
+                'label'       => __( 'Board Title / Role', 'boardroom-member-directory' ),
                 'type'        => 'text',
                 'placeholder' => 'e.g. Independent Board Director',
             ],
             'bmd_company'  => [
-                'label'       => __( 'Company / Organization', 'boardroom-member-directory' ),
+                'label'       => __( 'Board Company / Organization', 'boardroom-member-directory' ),
                 'type'        => 'text',
                 'placeholder' => 'e.g. Acme Corp',
             ],
-            'bmd_industry' => [
-                'label'       => __( 'Industry / Sector', 'boardroom-member-directory' ),
+            'bmd_location' => [
+                'label'       => __( 'Location', 'boardroom-member-directory' ),
                 'type'        => 'text',
-                'placeholder' => 'e.g. Financial Services',
+                'placeholder' => 'e.g. New York, NY',
             ],
             'bmd_linkedin' => [
                 'label'       => __( 'LinkedIn Profile URL', 'boardroom-member-directory' ),

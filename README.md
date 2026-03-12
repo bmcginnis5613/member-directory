@@ -50,7 +50,7 @@ These custom fields appear on each user's admin profile page (**Users → Edit U
 |----------------|------------------------|
 | `bmd_title`    | Job Title / Role       |
 | `bmd_company`  | Company / Organization |
-| `bmd_industry` | Industry / Sector      |
+| `bmd_location` | Location               |
 | `bmd_linkedin` | LinkedIn Profile URL   |
 
 Admins can edit these fields for any user in the WordPress back-end. Members can edit their own fields via the optional front-end form shortcode:
